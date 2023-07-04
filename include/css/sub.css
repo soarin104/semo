@@ -1,0 +1,53 @@
+/* common */
+body{
+	padding-top: 64px;
+}
+
+#contents section{
+	padding: 128px 0;
+}
+
+.tit{
+	font-size: 44px;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+.tit strong{
+	font-weight: 700;
+}
+
+.conTxt{
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+/* header */
+.header{
+	border-bottom: 1px solid #E2E6F1;
+}
+
+/* ---------------------------------------------------------------------------------- responsive 1000px */
+@media screen and (max-width: 1000px){
+
+/* common */
+.tit{
+	font-size: 7vw;
+	text-align: center;
+	font-weight: 500;
+	line-height: 1.25;
+}
+
+.conTxt{
+	font-size: 4vw;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+#contents section{
+	padding: 18vw 0;
+}
+
+}
+/* ---------------------------------------------------------------------------------- //responsive 1000px */

@@ -1,0 +1,209 @@
+.login *,
+.join * {box-sizing: border-box; letter-spacing: -0.025em;}
+
+.dim-layer {opacity: 0; z-index: -1; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: rgba(0, 0, 0, 0.6); transition: opacity 0.15s, z-index 0.15s;}
+.dim-layer.active {opacity: 1; z-index: 1000;}
+
+/* 로그인 */
+.login {padding-top: 100px;}
+.login .login-wrapper {width: 100%; min-height: calc(100vh - 160px); padding-bottom: 32px;}
+.login .login-wrapper .bg {position: fixed; top: -80px; left: 0; width: 100%; height: calc(100% + 80px); z-index: -1;}
+.login .login-wrapper .bg .video-wrapper {position: relative; width: 100%; height: 100%;}
+.login .login-wrapper .bg .video-wrapper > video {width: 100%; height: 100%; object-fit: cover; vertical-align: bottom;}
+
+.login .login-tit {font-size: 32px; font-weight: 600; line-height: 1.25; color: #fff;}
+.login .login-form {position: relative; width: 410px; height: 562px; max-width: 100%; margin-top: 40px; border: 1px solid rgba(255, 255, 255, 0.4); border-radius: 24px; padding: 50px 50px 55px; 
+    background-color: rgba(248, 248, 248, 0.1); 
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    backdrop-filter: blur(50px); */
+    filter: drop-shadow(4px 4px 50px rgba(0, 0, 0, 0.05));
+}
+.login .login-form::before {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; filter: drop-shadow(4px 4px 50px rgba(0, 0, 0, 0.2)); z-index: -1;
+    /* background-color: #fff;  */
+}
+.login .login-form h3 {font-size: 28px; font-weight: 600; line-height: 1.35; color: #f8f8f8; margin-bottom: 30px;}
+.login-bottom {margin-top: 136px;}
+.login-bottom .lb-terms {}
+.login-bottom .lb-terms > a {position: relative; display: inline-block; font-size: 16px; font-weight: 500; line-height: 1.25; color: #fff;}
+.login-bottom .lb-terms > a:first-child {margin-right: 12px; padding-right: 12px;}
+.login-bottom .lb-terms > a:first-child::after {content: ""; position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 1px; height: 14px; background-color: rgba(226, 230, 241, 1);}
+.login-bottom .copyright {margin-top: 8px; font-size: 14px; font-weight: 600; color: #E2E6F1;}
+.login-way {margin-top: 12px;}
+.login-way .or {display: block; margin: 16px 0 20px; font-size: 16px; font-weight: 600; color: #f8f8f8; text-align: center;}
+.login-way .rec-join {display: block; width: 100%; margin-top: 83px; font-size: 16px; font-weight: 600; color: #f8f8f8; text-align: center;}
+.login-way .rec-join > a {display: inline-block; margin-left: 4px; font-size: 16px; font-weight: 700; color: #f8f8f8; text-decoration: underline;}
+
+@media screen and (max-width: 768px) {
+    .login {background-color: #4669FF;}
+    .login .login-wrapper {padding-bottom: 38px;}
+    .login .login-wrapper .bg {background-color: #4669FF;}
+    .login .login-wrapper .bg .video-wrapper {position: absolute; bottom: 0; left: 0; height: 240px;}
+    .login .login-wrapper .bg .video-wrapper::after {content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 178px; background: url("../img/login/gradient2.png") center center / cover no-repeat;}
+
+    .login .login-tit {text-align: center;}
+    .login .login-form {margin-top: 34px; padding: 36px 20px 38px; height: unset;}
+    .login .login-form h3 {font-size: 20px; text-align: center;}
+    .login-way {margin-top: 20px;}
+    .login-way .or {margin: 12px 0;}
+    .login-way .rec-join {margin-top: 43px;}
+    .login-bottom {margin-top: 90px; text-align: center;}
+}
+
+/* 회원가입 */
+.join {padding: 88px 0 113px; min-height: calc(100vh - 80px);}
+.join-form {width: 416px; max-width: 100%; margin-inline: auto; padding: 48px; border: 1px solid #E2E6F1; border-radius: 20px;}
+.join-form .form-logo {display: inline-block; width: 85px;}
+.join-form .form-logo > img {width: 100%;}
+.join-form .main-tit {margin-top: 24px; font-size: 28px; font-weight: 600; line-height: 1.35; color: #343c50;}
+.join-form .sub-tit {margin: 4px 0 40px; font-size: 20px; font-weight: 500; line-height: 1.5; color: #343c50;}
+.join-form .sub-tit > span {font-size: 20px; font-weight: 700; line-height: 1.5; color: rgba(75, 80, 90, 1);}
+.join-form .sub-tit > span > b {color: #2755FF;}
+
+@media screen and (max-width: 768px) {
+    .join {min-height: unset; padding: 95px 0 60px; margin-top: 15px;}
+    .join-form {border: none; padding: 0;}
+    .join-form .form-logo {display: none;}
+    .join-form .main-tit {line-height: 1.25; margin-top: 0;}
+    .join-form .sub-tit {font-size: 16px; font-weight: 600; line-height: 1.35; margin: 4px 0 32px;}
+    .tab:nth-child(2) .join-form .sub-tit {margin: 4px 0 44px;}
+    .join-form .sub-tit > span {font-size: 16px; font-weight: 600; line-height: 1.35;}
+}
+
+/* form commons */
+.tab-wrapper {}
+.tab-wrapper .tab {display: none;}
+.tab-wrapper .tab.active {display: block;}
+
+.form-container {position: relative;}
+.form-container .btn_tab-prev {position: absolute; top: -32px; left: 0; display: inline-flex; justify-content: center; align-items: center; font-size: 16px; font-weight: 600; color: #2755FF;}
+.form-container .btn_tab-prev > img {width: 8px; margin-right: 5px;}
+.form-container .form-wrapper {display: flex; flex-direction: column; gap: 30px;}
+.form-container .input-element {}
+.form-container .input-element label {display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;}
+.form-container .input-element label .input-label {font-size: 14px; font-weight: 600; color: #4B505A;}
+.form-container .input-element label .input-label > img {width: 16px; margin-left: 4px;}
+.form-container .input-element label .input-esset {font-size: 12px; font-weight: 500; line-height: 1.5; color: #666B7C;}
+.form-container .input-element label .input-esset > img {width: 16px; margin-right: 4px;}
+.form-container .input-element .input {display: flex; width: 100%; height: 44px; border: 1px solid rgba(198, 203, 219, 1); border-radius: 10px; overflow: hidden; transition: border-color 0.15s;}
+.form-container .input-element .input input {width: 100%; height: 100%; border: none; outline: none; padding: 0 16px; background-color: transparent; font-size: 14px; font-weight: 500; color: #343C50;}
+.form-container .input-element .input .input-esset {display: inline-flex; justify-content: center; align-items: center; height: 100%; flex-shrink: 0; padding: 0 12px; font-size: 14px; font-weight: 500; color: #666b7c;}
+.form-container .input-element .input:focus-within {border-color: rgba(39, 85, 255, 1);}
+.form-container .input-element .input input::placeholder {color: rgba(135, 140, 156, 1);}
+
+.form-container.login-form .form-wrapper {gap: 16px;}
+.form-container.login-form .input-element label .input-label {font-size: 16px; color: #F9F9FC;}
+.form-container.login-form .input-element .input {border-color: rgba(171, 200, 255, 1);}
+.form-container.login-form .input-element .input:focus-within {border-color: #fff;}
+.form-container.login-form .input-element .input input {color: #fff;}
+.form-container.login-form .input-element .input input::placeholder {color: rgba(124, 169, 255, 1);}
+
+.form-container.modal-form .input-element .input {border-color: #C6CBDB;}
+.form-container.modal-form .input-element .input:focus-within {border-color: #666B7C;}
+.form-container.modal-form .input-element .input input {color: #666B7C;}
+.form-container.modal-form .input-element .input input::placeholder {color: #878C9C;}
+
+.form-container.modal-form .input-element .input.error:focus-within {border-color: #FF1A27;}
+.form-container.modal-form .input-element .input.error .input-esset {color: #FF1927;}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-transition: background-color 9999s ease-out;
+    -webkit-box-shadow: 0 0 0px 1000px #f9f9fc inset !important;
+    /* -webkit-text-fill-color: #fff !important; */
+}
+
+.form-button {margin-top: 20px;}
+.form-button .other-way {display: block; font-size: 14px; font-weight: 500; line-height: 1.5; color: #666B7C; text-align: center;}
+.form-button .other-way > a {position: relative; display: inline-block; cursor: pointer;}
+.form-button .other-way > a::after {content: ""; position: absolute; bottom: 2px; left: 0; width: 100%; height: 1px; background-color: rgba(102, 107, 124, 1);}
+
+@media screen and (max-width: 768px) {
+    .form-container .form-wrapper {gap: 16px;}
+    .form-container .btn_tab-prev {top: -50px; font-size: 14px; font-weight: 700;}
+    .form-container .btn_tab-prev > img {width: 6px;}
+
+    .form-container.login-form .form-wrapper {gap: 12px;}
+    .form-container.login-form .input-element label .input-label {color: #fff;}
+    .form-container.login-form .input-element .input input {padding: 0 14px;}
+
+    .form-button {margin-top: 32px;}
+}
+
+/* modal */
+.modal {display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 420px; max-width: 100%; padding: 40px 36px; background-color: #fff; box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.05); border-radius: 20px; z-index: 1001;}
+.modal.active {display: block;}
+.modal .modal-inner {}
+.modal .modal-inner .modal-tit {text-align: center; margin-bottom: 20px;}
+.modal .modal-inner .modal-tit > span {font-size: 20px; font-weight: 700; line-height: 1.5; color: #666b7c;}
+.modal .modal-inner .input-element {}
+.modal .modal-inner .input-element .input {}
+.modal .modal-inner .input-element .input > input {}
+.modal .modal-inner .input-element .input .input-esset {}
+.modal .modal-inner .verify_status {display: flex; justify-content: space-between; align-items: center; margin-top: 8px;}
+.modal .modal-inner .verify_status .verify_txt {font-size: 16px; font-weight: 600; color: #666b7c;}
+.modal .modal-inner .verify_status .btn-verify_re {display: inline-flex; justify-content: center; align-items: center; width: 120px; height: 28px; border: 1px solid #c6cbdb; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600; color: #666b7c;}
+.modal .modal-inner .term-container {padding: 0 4px;}
+.modal .modal-inner .term-container .checkbox {position: relative; display: flex; justify-content: space-between; align-items: center; width: 100%;}
+.modal .modal-inner .term-container .checkbox:first-child {margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #e2e6f1;}
+.modal .modal-inner .term-container .checkbox:not(:last-child) {margin-bottom: 12px;}
+.modal .modal-inner .term-container .checkbox > a {position: absolute; top: 50%; right: 0; transform: translateY(-50%); cursor: pointer;}
+.modal .modal-inner .term-container .checkbox > a > img {width: 8px;}
+.modal .modal-inner .modal-buttons {display: flex; gap: 4px; margin-top: 40px;}
+
+@media screen and (max-width: 768px) {
+    .modal {top: unset; left: 0; bottom: 0; transform: unset; border-radius: 20px 20px 0 0; padding: 40px 20px;}
+}
+/* buttons */
+.btn-default {display: inline-flex; justify-content: center; align-items: center; width: 100%; height: 44px; background-color: #fff; border-radius: 10px; font-size: 14px; font-weight: 700; color: #343c50; transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, color 0.5s ease-in-out; cursor: pointer;}
+.btn-default.active {}
+.btn-form {background-color: #E2E6F1; color: #878C9C; margin-top: 60px; pointer-events: none; cursor: pointer;}
+.btn-form.active {background-color: #2755FF; color: #fff; pointer-events: unset;}
+.btn-login {background-color: #fff;}
+.btn-login:hover {background-color: #DBEEFF;}
+.btn-login.pressed {background-color: #7CA9FF;}
+.btn-login_kakao {background-color: #FFDA58;}
+.btn-login_kakao:hover {background-color: #FFE68C;}
+.btn-login_kakao.pressed {background-color: #EAC646;}
+.btn_modal {display: inline-flex; justify-content: center; align-items: center; height: 44px; font-size: 14px; font-weight: 700; border-radius: 10px; cursor: pointer;}
+.btn_modal.btn-cancel {width: 106px; flex-shrink: 0; background-color: #E2E6F1; color: #878C9C;}
+.btn_modal.btn-confirm {width: 100%; background-color: #2755FF; color: #fff;}
+.btn_modal.disabled {background-color: #E2E6F1; pointer-events: none; color: #878C9C;}
+
+@media screen and (max-width: 768px) {
+    .btn-form {margin-top: 56px;}
+}
+
+/* radio */
+.radio {display: flex; align-items: center; flex-wrap: wrap; gap: 24px; width: 100%; margin-top: 12px;}
+.radio-item {position: relative; width: 110px;}
+input[type="radio"] {position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;}
+input[type="radio"] + label {display: inline-block; position: relative; padding-left: 20px; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; font-size: 14px; font-weight: 500; color: #878C9C;}
+input[type="radio"]:checked + label {color: #878C9C;}
+input[type="radio"] + label:before {content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; text-align: center; background-color: #fff; border: 1px solid #C6CBDB; border-radius: 100%; box-sizing: border-box;}
+input[type="radio"] + label:before,
+input[type="radio"] + label:after {transition: border-color 0.35s, background-color 0.35s;}
+input[type="radio"] + label:active:before,
+input[type="radio"]:checked + label:active:before {}
+input[type="radio"]:checked + label:before {background-color: #fff; border: 4px solid #2755FF;}
+input[type="radio"]:checked + label:after {content: ""; position: absolute; top: 50%; left: 4px; transform: translateY(-50%); width: 12px; height: 12px; background-color: transparent; border-radius: 50%;}
+
+/* check */
+.checkbox {position: relative; display: inline-flex; width: 125px;}
+.checkbox:after {display: block; clear: both; content: '';}
+.checkbox > input {}
+.checkbox > input[type="checkbox"] {display: none;}
+.checkbox > input[type="checkbox"] + label {display: inline-flex; align-items: center; width: 20px; height: 20px; background: #fff; border: 1px solid #C6CBDB; cursor: pointer; border-radius: 4px; box-sizing: border-box;}
+.checkbox > input[type="checkbox"]:checked + label {background: url("../img/login/checkbox.png") center center / cover no-repeat; border-color: transparent;}
+.checkbox > label {}
+.checkbox >  input[type="checkbox"] + label > span {position: absolute; left: 28px; display: block; font-size: 16px; font-weight: 600; color: #343c50;}
+
+.view-mo {display: none;}
+.view-pc {display: block;}
+
+@media screen and (max-width: 768px) {
+    .view-mo {display: block;}
+    .view-pc {display: none;}
+}

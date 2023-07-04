@@ -1,0 +1,144 @@
+/* faqBox */
+.faqBox{
+	background: #f9f9fc;
+}
+
+.faqBox h2{
+	text-align: center;
+	margin-bottom: 50px;
+	box-sizing: border-box;
+}
+
+.faqBox ul{
+	max-width: 1064px;
+	margin: auto;
+}
+
+.faqBox ul li{
+	background: #fff;
+	border-radius: 20px;
+	padding: 24px 30px;
+	box-sizing: border-box;
+	margin-bottom: 12px;
+	cursor: pointer;
+}
+
+.faqBox ul li:last-child{
+	margin-bottom: 0;
+}
+
+.faqBox ul li .category{
+	display: inline-block;
+	color: #fff;
+	border-radius: 100px;
+	padding: 4px 8px;
+	font-size: 14px;
+	line-height: 1;
+	margin-bottom: 14px;
+}
+
+.faqBox ul li h5{
+	font-size: 20px;
+	padding-left: 35px;
+	line-height: 1.2;
+	background: url(../img/ico-question.png) no-repeat center left / contain;
+	position: relative;
+}
+
+.faqBox ul li h5::after{
+	content: '';
+	display: block;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	right: 0px;
+	top: 50%;
+	transform: translate(0,-50%);
+	background: url(../img/ico-arrow-down.png) no-repeat center / cover;
+	transition: all 0.4s;
+}
+
+.faqBox ul li.on h5::after{
+	transform: translate(0,-50%) rotate(180deg);
+}
+
+.faqBox ul li h5 span{
+	font-weight: 900;
+	color: var(--mainCol);
+}
+
+.faqBox ul li p{
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 1.7;
+	display: none;
+}
+
+.faqBox ul li:first-child p{
+	display: block;
+}
+
+.faqBox .moreBtn{
+	display: block;
+	background:	#111;
+	color: #fff;
+	font-size: 20px;
+	width: 200px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	margin: 60px auto 0;
+	border-radius: 100px;
+	transition: all 0.3s;
+}
+
+.faqBox .moreBtn:hover{
+	background-color: #4B505A;
+}
+
+.faqBox .moreBtn:active{
+	background-color: #111;
+}
+
+
+/* ----------------------------------------------------------------------------------responsive 1000px */
+@media screen and (max-width: 1000px){
+
+/* faqBox */
+.faqBox h2{
+	margin-bottom: 8vw;
+}
+
+.faqBox ul li{
+	padding: 6vw 7vw;
+}
+
+.faqBox ul li .category{
+	font-size: 3vw;
+}
+
+.faqBox ul li h5{
+	font-size: 4vw;
+	line-height: 1.6;
+	background-size: auto 5vw;
+	box-sizing: border-box;
+	padding-right: 10vw;
+	padding-left: 7vw;
+}
+
+.faqBox ul li p{
+	font-size: 3vw;
+}
+
+.faqBox .moreBtn{
+	margin: 10vw auto 0;
+	font-size: 5vw;
+	font-weight: 600;
+	width: 50%;
+	height: auto;
+	padding: 6vw 0;
+	line-height: 1;
+}
+
+}
+/* ----------------------------------------------------------------------------------//responsive 1000px */
